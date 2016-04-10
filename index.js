@@ -52,6 +52,18 @@ module.exports = {
     // ++++++++++++++++++++
     // Variables
     // ++++++++++++++++++++
+    'init-declarations'          : 'off',   // Enforce/Disallow Variable Initializations
+    'no-catch-shadow'            : 'off',   // Disallow Shadowing of Variables Inside of catch
+    'no-delete-var'              : 'error', // Disallow Variables Deletion
+    'no-label-vars'              : 'error', // Disallow Labels That Are Variables Names
+    'no-restricted-globals'      : 'off',   // Disallow specific global variables
+    'no-shadow'                  : 'error', // Disallow Shadowing
+    'no-shadow-restricted-names' : 'error', // Disallow Shadowing of Restricted Names
+    'no-undef'                   : 'error', // Disallow Undeclared Variables
+    'no-undef-init'              : 'off',   // Disallow Initializing to undefined
+    'no-undefined'               : 'off',   // Disallow Use of undefined Variable
+    'no-unused-vars'             : 'error', // Disallow Unused Variables
+    'no-use-before-define'       : 'error', // Disallow Early Use
     // ++++++++++++++++++++
     // Node.js and CommonJS
     // ++++++++++++++++++++
