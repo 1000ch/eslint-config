@@ -54,6 +54,16 @@ module.exports = {
     // ++++++++++++++++++++
     // Node.js and CommonJS
     // ++++++++++++++++++++
+    'callback-return'       : 'error', // Enforce Return After Callback
+    'global-require'        : 'off',   // Enforce require() on the top-level module scope
+    'handle-callback-err'   : 'off',   // Enforce Callback Error Handling
+    'no-mixed-requires'     : 'error', // Disallow Mixed Requires
+    'no-new-require'        : 'error', // Disallow new require
+    'no-path-concat'        : 'off',   // Disallow string concatenation when using
+    'no-process-env'        : 'off',   // Disallow process.env
+    'no-process-exit'       : 'off',   // Disallow process.exit()
+    'no-restricted-modules' : 'off',   // Disallow Node.js modules
+    'no-sync'               : 'off',   // Disallow Synchronous Methods
     // ++++++++++++++++++++
     // Stylistic Issues
     // ++++++++++++++++++++
