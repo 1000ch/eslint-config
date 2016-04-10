@@ -60,6 +60,40 @@ module.exports = {
     // ++++++++++++++++++++
     // ECMAScript 6
     // ++++++++++++++++++++
+    'arrow-body-style'       : 'off',   // Require braces in arrow function body
+    'arrow-parens'           : 'off',   // Require parens in arrow function arguments
+    'arrow-spacing'          : ['error', {
+      before : true,
+      after  : true
+    }],                                 // Require space before/after arrow function’s arrow
+    'constructor-super'      : 'off',   // Verify calls of super() in constructors
+    'generator-star-spacing' : ['error', {
+      before : false,
+      after  : true
+    }],                                 // Enforce spacing around the * in generator functions
+    'no-class-assign'        : 'error', // Disallow modifying variables of class declarations
+    'no-confusing-arrow'     : 'off',   // Disallow arrow functions where they could be confused with comparisons
+    'no-const-assign'        : 'error', // Disallow modifying variables that are declared using const
+    'no-dupe-class-members'  : 'error', // Disallow duplicate name in class members
+    'no-duplicate-imports'   : 'error', // Disallow duplicate imports
+    'no-new-symbol'          : 'error', // Disallow Symbol Constructor
+    'no-restricted-imports'  : 'off',   // Disallow specific imports
+    'no-this-before-super'   : 'error', // Disallow use of this/super before calling super() in constructors
+    'no-useless-constructor' : 'error', // Disallow unnecessary constructor
+    'no-var'                 : 'off',   // require let or const instead of var
+    'object-shorthand'       : 'off',   // Require Object Literal Shorthand Syntax
+    'prefer-arrow-callback'  : 'off',   // Suggest using arrow functions as callbacks
+    'prefer-const'           : 'error', // Suggest using const
+    'prefer-reflect'         : 'error', // Suggest using Reflect methods where applicable
+    'prefer-rest-params'     : 'error', // Suggest using the rest parameters instead of arguments
+    'prefer-spreads'         : 'error', // Suggest using the spread operator instead of .apply()
+    'prefer-template'        : 'error', // Suggest using template literals instead of string concatenation
+    'require-yield'          : 'error', // Disallow generator functions that do not have yield
+    'template-curly-spacing' : 'error', // Enforce Usage of Spacing in Template Strings
+    'yield-star-spacing'     : ['error', {
+      before : false,
+      after  : true
+    }]                                  // Enforce spacing around the * in yield* expressions
     // ++++++++++++++++++++
     // Removed
     // ++++++++++++++++++++
