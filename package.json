@@ -1,0 +1,32 @@
+{
+  "name": "@1000ch/eslint-config",
+  "version": "0.0.0",
+  "description": "ESLint config",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "react.js",
+    "readme.md"
+  ],
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": "1000ch/eslint-config",
+  "keywords": [
+    "eslint",
+    "config"
+  ],
+  "author": "1000ch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1000ch/eslint-config/issues"
+  },
+  "homepage": "https://github.com/1000ch/eslint-config#readme",
+  "devDependencies": {
+    "eslint": "^2.7.0",
+    "eslint-plugin-react": "^4.3.0"
+  },
+  "peerDependencies": {
+    "eslint": "^2.7.0"
+  }
+}
