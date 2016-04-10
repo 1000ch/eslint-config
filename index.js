@@ -45,6 +45,70 @@ module.exports = {
     // ++++++++++++++++++++
     // Best Practices
     // ++++++++++++++++++++
+    'accessor-pairs'               : 'off',   // Enforces getter/setter pairs in objects
+    'array-callback-return'        : 'error', // Enforces return statements in callbacks of array’s methods
+    'block-scoped-var'             : 'error', // Treat var as Block Scoped
+    'complexity'                   : 'off',   // Limit Cyclomatic Complexity
+    'consistent-return'            : 'error', // Require Consistent Returns
+    'curly'                        : 'error', // Require Following Curly Brace Conventions
+    'default-case'                 : 'error', // Require Default Case in Switch Statements
+    'dot-location'                 : ['error', 'property'], // Enforce newline before and after dot
+    'dot-notation'                 : 'error', // Require Dot Notation
+    'eqeqeq'                       : 'error', // Require === and !==
+    'guard-for-in'                 : 'off',   // Require Guarding for-in
+    'no-alert'                     : 'off',   // Disallow Use of Alert
+    'no-caller'                    : 'error', // Disallow Use of caller/callee
+    'no-case-declarations'         : 'off',   // Disallow lexical declarations in case/default clauses
+    'no-div-regex'                 : 'error', // Disallow Regexs That Look Like Division
+    'no-else-return'               : 'off',   // Disallow return before else
+    'no-empty-function'            : 'error', // Disallow empty functions
+    'no-empty-pattern'             : 'error', // Disallow empty destructuring patterns
+    'no-eq-null'                   : 'error', // Disallow Null Comparisons
+    'no-eval'                      : 'error', // Disallow eval()
+    'no-extend-native'             : 'warn',  // Disallow Extending of Native Objects
+    'no-extra-bind'                : 'error', // Disallow unnecessary function binding
+    'no-extra-label'               : 'error', // Disallow Unnecessary Labels
+    'no-fallthrough'               : 'error', // Disallow Case Statement Fallthrough
+    'no-floating-decimal'          : 'error', // Disallow Floating Decimals
+    'no-implicit-coercion'         : 'error', // Disallow the type conversion with shorter notations
+    'no-implicit-globals'          : 'off',   // Disallow var and Named Functions in Global Scope
+    'no-implied-eval'              : 'error', // Disallow Implied eval()
+    'no-invalid-this'              : 'error', // Disallow this keywords outside of classes or class-like objects
+    'no-iterator'                  : 'error', // Disallow Iterator
+    'no-labels'                    : 'error', // Disallow Labeled Statements
+    'no-lone-blocks'               : 'error', // Disallow Unnecessary Nested Blocks
+    'no-loop-func'                 : 'error', // Disallow Functions in Loops
+    'no-magic-numbers'             : 'off',   // Disallow Magic Numbers
+    'no-multi-spaces'              : 'error', // Disallow multiple spaces
+    'no-multi-str'                 : 'error', // Disallow Multiline Strings
+    'no-native-reassign'           : 'error', // Disallow Reassignment of Native Objects
+    'no-new'                       : 'off',   // Disallow new For Side Effects
+    'no-new-func'                  : 'error', // Disallow Function Constructor
+    'no-new-wrappers'              : 'error', // Disallow Primitive Wrapper Instances
+    'no-octal'                     : 'error', // Disallow Octal Literals
+    'no-octal-escape'              : 'error', // Disallow Octal Escapes
+    'no-param-reassign'            : 'off',   // Disallow Reassignment of Function Parameters
+    'no-proto'                     : 'error', // Disallow Use of __proto__
+    'no-redeclare'                 : 'error', // Disallow Redeclaring Variables
+    'no-return-assign'             : 'error', // Disallow Assignment in return Statement
+    'no-script-url'                : 'error', // Disallow Script URLs
+    'no-self-assign'               : 'error', // Disallow Self Assignment
+    'no-self-compare'              : 'error', // Disallow Self Compare
+    'no-sequences'                 : 'error', // Disallow Use of the Comma Operator
+    'no-throw-literal'             : 'error', // Restrict what can be thrown as an exception
+    'no-unmodified-loop-condition' : 'off',   // Disallow unmodified conditions of loops
+    'no-unused-expressions'        : 'error', // Disallow Unused Expressions
+    'no-unused-labels'             : 'error', // Disallow Unused Labels
+    'no-useless-call'              : 'error', // Disallow unnecessary .call() and .apply()
+    'no-useless-concat'            : 'error', // Disallow unnecessary concatenation of strings
+    'no-useless-escape'            : 'error', // Disallow unnecessary escape usage
+    'no-void'                      : 'off',   // Disallow use of the void operator
+    'no-warning-comments'          : 'off',   // Disallow Warning Comments
+    'no-with'                      : 'error', // No with Statements
+    'radix'                        : 'error', // Require Radix Parameter
+    'vars-on-top'                  : 'off',   // Require Variable Declarations to be at the top of their scope
+    'wrap-iife'                    : ['error', 'any'], // Require IIFEs to be Wrapped
+    'yoda'                         : 'off',   // Require or disallow Yoda Conditions
     // ++++++++++++++++++++
     // Strict Mode
     // ++++++++++++++++++++
