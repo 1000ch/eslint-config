@@ -9,7 +9,7 @@
     "readme.md"
   ],
   "scripts": {
-    "test": "node test/index.js"
+    "test": "node test/index.js && eslint --max-warnings 0 -c index.js ."
   },
   "repository": "1000ch/eslint-config",
   "keywords": [
