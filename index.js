@@ -48,6 +48,7 @@ module.exports = {
     // ++++++++++++++++++++
     // Strict Mode
     // ++++++++++++++++++++
+    'strict' : ['error', 'safe'], // Strict Mode Directives
     // ++++++++++++++++++++
     // Variables
     // ++++++++++++++++++++
