@@ -16,7 +16,7 @@ module.exports = {
     // ++++++++++++++++++++
     'comma-dangle'                  : 'error', // Disallow or Enforce Dangling Commas
     'no-cond-assign'                : 'error', // Disallow Assignment in Conditional Statements
-    'no-console'                    : 'error', // Disallow Use of console
+    'no-console'                    : 'off', // Disallow Use of console
     'no-constant-condition'         : 'error', // Disallow use of constant expressions in conditions
     'no-control-regex'              : 'error', // Disallow Controls Characters in Regular Expressions
     'no-debugger'                   : 'error', // Disallow debugger
@@ -51,7 +51,7 @@ module.exports = {
     complexity                      : 'off', // Limit Cyclomatic Complexity
     'consistent-return'             : 'error', // Require Consistent Returns
     curly                           : 'error', // Require Following Curly Brace Conventions
-    'default-case'                  : 'error', // Require Default Case in Switch Statements
+    'default-case'                  : 'off', // Require Default Case in Switch Statements
     'dot-location'                  : ['error', 'property'], // Enforce newline before and after dot
     'dot-notation'                  : 'error', // Require Dot Notation
     eqeqeq                          : 'error', // Require === and !==
@@ -77,7 +77,7 @@ module.exports = {
     'no-iterator'                   : 'error', // Disallow Iterator
     'no-labels'                     : 'error', // Disallow Labeled Statements
     'no-lone-blocks'                : 'error', // Disallow Unnecessary Nested Blocks
-    'no-loop-func'                  : 'error', // Disallow Functions in Loops
+    'no-loop-func'                  : 'off', // Disallow Functions in Loops
     'no-magic-numbers'              : 'off', // Disallow Magic Numbers
     'no-multi-spaces'               : 'error', // Disallow multiple spaces
     'no-multi-str'                  : 'error', // Disallow Multiline Strings
@@ -158,7 +158,7 @@ module.exports = {
     'id-blacklist'                  : 'off', // Disallow certain identifiers to prevent them being used
     'id-length'                     : 'off', // Enforce minimum and maximum identifier lengths (variable names, property names etc.)
     'id-match'                      : 'off', // Require identifiers to match the provided regular expression
-    indent                          : ['error', 2], // Specify tab or space width for your code
+    indent                          : ['error', 2, { SwitchCase : 1 }], // Specify tab or space width for your code
     'jsx-quotes'                    : ['error', 'prefer-double'], // Specify whether double or single quotes should be used in JSX attributes
     'key-spacing'                   : ['error', { beforeColon : true, afterColon : true, align : 'colon' }], // Enforce spacing between keys and values in object literal properties
     'keyword-spacing'               : 'error', // Enforce spacing before and after keywords
@@ -233,7 +233,7 @@ module.exports = {
     'no-var'                        : 'off', // require let or const instead of var
     'object-shorthand'              : 'off', // Require Object Literal Shorthand Syntax
     'prefer-arrow-callback'         : 'off', // Suggest using arrow functions as callbacks
-    'prefer-const'                  : 'error', // Suggest using const
+    'prefer-const'                  : 'off', // Suggest using const
     'prefer-reflect'                : 'error', // Suggest using Reflect methods where applicable
     'prefer-rest-params'            : 'error', // Suggest using the rest parameters instead of arguments
     'prefer-spread'                 : 'error', // Suggest using the spread operator instead of .apply()
