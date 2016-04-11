@@ -14,7 +14,10 @@ In `.eslintrc`:
 
 ```json
 {
-  "extends": ["@1000ch"]
+  "extends": [
+    "@1000ch/eslint-config",
+    "@1000ch/eslint-config/react"
+  ]
 }
 ```
 
@@ -23,7 +26,10 @@ In `package.json`:
 ```json
 {
   "eslintConfig": {
-    "extends": ["@1000ch"]
+    "extends": [
+      "@1000ch/eslint-config",
+      "@1000ch/eslint-config/react"
+    ]
   }
 }
 ```
