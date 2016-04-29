@@ -46,7 +46,7 @@ module.exports = {
     'react/jsx-indent-props'             : ['error', 2], // Validate props indentation in JSX (fixable)
     'react/jsx-indent'                   : ['error', 2], // Validate JSX indentation
     'react/jsx-key'                      : 'off', // Validate JSX has key prop when in array or iterator
-    'react/jsx-max-props-per-line'       : ['error', { maximum : 1 }], // Limit maximum of props on a single line in JSX
+    'react/jsx-max-props-per-line'       : 'off', // Limit maximum of props on a single line in JSX
     'react/jsx-no-bind'                  : 'error', // Prevent usage of .bind() and arrow functions in JSX props
     'react/jsx-no-duplicate-props'       : 'error', // Prevent duplicate props in JSX
     'react/jsx-no-literals'              : 'off', // Prevent usage of unwrapped JSX strings
