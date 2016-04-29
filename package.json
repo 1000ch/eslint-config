@@ -23,10 +23,11 @@
   },
   "homepage": "https://github.com/1000ch/eslint-config#readme",
   "devDependencies": {
-    "eslint": "^2.8.0",
-    "eslint-plugin-react": "^5.0.1"
+    "eslint": "^2.8.0"
   },
   "peerDependencies": {
-    "eslint": "^2.8.0"
+    "babel-eslint": "6.0.4",
+    "eslint": "^2.8.0",
+    "eslint-plugin-react": "^5.0.1"
   }
 }
