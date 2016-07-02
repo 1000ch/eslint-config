@@ -14,7 +14,6 @@ module.exports = {
     // ++++++++++++++++++++
     // Possible Errors
     // ++++++++++++++++++++
-    'comma-dangle'                  : 'error', // Disallow or Enforce Dangling Commas
     'no-cond-assign'                : 'error', // Disallow Assignment in Conditional Statements
     'no-console'                    : 'off', // Disallow Use of console
     'no-constant-condition'         : 'error', // Disallow use of constant expressions in conditions
@@ -39,6 +38,7 @@ module.exports = {
     'no-sparse-arrays'              : 'error', // Disallow Sparse Arrays
     'no-unexpected-multiline'       : 'error', // Avoid unexpected multiline expressions
     'no-unreachable'                : 'error', // Disallow Unreachable Code
+    'no-unsafe-finally'             : 'error', // Disallow control flow statements in finally blocks
     'use-isnan'                     : 'error', // Require isNaN()
     'valid-jsdoc'                   : 'error', // Validates JSDoc comments are syntactically correct
     'valid-typeof'                  : 'error', // Ensures that the results of typeof are compared against a valid string
@@ -148,6 +148,7 @@ module.exports = {
     'block-spacing'                 : ['error', 'always'], // Disallow or enforce spaces inside of single line blocks
     'brace-style'                   : ['error', '1tbs', { allowSingleLine : true }], // Enforce one true brace style
     camelcase                       : ['error', { properties : 'always' }], // Require camel case names
+    'comma-dangle'                  : 'error', // Disallow or Enforce Dangling Commas
     'comma-spacing'                 : ['error', { before : false, after : true }], // Enforce spacing before and after comma
     'comma-style'                   : ['error', 'last'], // Enforce one true comma style
     'computed-property-spacing'     : ['error', 'never'], // Require or disallow padding inside computed properties
@@ -166,6 +167,7 @@ module.exports = {
     'lines-around-comment'          : 'off', // Enforce empty lines around comments
     'max-depth'                     : 'off', // Specify the maximum depth that blocks can be nested
     'max-len'                       : ['error', 200, 4], // Specify the maximum length of a line in your program
+    'max-lines'                     : 'off', // Enforce a maximum file length
     'max-nested-callbacks'          : 'off', // Specify the maximum depth callbacks can be nested
     'max-params'                    : 'off', // Specify the number of parameters that can be used in the function declaration
     'max-statements'                : 'off', // Specify the maximum number of statement allowed in a function
@@ -180,6 +182,7 @@ module.exports = {
     'no-continue'                   : 'off', // Disallow use of the continue statement
     'no-inline-comments'            : 'off', // Disallow comments inline after code
     'no-lonely-if'                  : 'off', // Disallow if as the only statement in an else block
+    'no-mixed-operators'            : 'error', // Disallow mixes of different operators
     'no-mixed-spaces-and-tabs'      : 'error', // Disallow mixed spaces and tabs for indentation
     'no-multiple-empty-lines'       : 'error', // Disallow multiple empty lines
     'no-negated-condition'          : 'off', // Disallow negated conditions
@@ -193,7 +196,9 @@ module.exports = {
     'no-underscore-dangle'          : 'off', // Disallow dangling underscores in identifiers
     'no-unneeded-ternary'           : 'off', // Disallow the use of ternary operators when a simpler alternative exists
     'no-whitespace-before-property' : 'error', // Disallow whitespace before properties
-    'object-curly-spacing'          : ['error', 'always'], // Require or disallow padding inside curly braces
+    'object-curly-newline'          : 'off', // Enforce consistent line breaks inside braces
+    'object-curly-spacing'          : ['error', 'always'], // Enforce consistent spacing inside braces
+    'object-property-newline'       : 'off', // Enforce placing object properties on separate lines
     'one-var'                       : ['error', { var : 'never', let : 'never', const : 'never' }], // Require or disallow one variable declaration per function
     'one-var-declaration-per-line'  : 'off', // Require or disallow an newline around variable declarations
     'operator-assignment'           : 'off', // Require assignment operator shorthand where possible or prohibit it entirely
@@ -204,7 +209,6 @@ module.exports = {
     'require-jsdoc'                 : 'off', // Require JSDoc comment
     semi                            : ['error', 'always'], // Require or disallow use of semicolons instead of ASI
     'semi-spacing'                  : ['error', { before : false, after : true }], // Enforce spacing before and after semicolons
-    'sort-imports'                  : 'off', // Enforce sorting import declarations within module
     'sort-vars'                     : 'off', // Enforce sorting variables within the same declaration block
     'space-before-blocks'           : ['error', 'always'], // Require or disallow a space before blocks
     'space-before-function-paren'   : ['error', 'never'], // Require or disallow a space before function opening parenthesis
@@ -212,6 +216,7 @@ module.exports = {
     'space-infix-ops'               : 'error', // Require spaces around operators
     'space-unary-ops'               : 'error', // Require or disallow spaces before/after unary operators
     'spaced-comment'                : ['error', 'always'], // Require or disallow a space immediately following the // or /* in a comment
+    'unicode-bom'                   : 'off', // Require or disallow the Unicode BOM
     'wrap-regex'                    : 'off', // Require regex literals to be wrapped in parentheses
     // ++++++++++++++++++++
     // ECMAScript 6
@@ -229,7 +234,9 @@ module.exports = {
     'no-new-symbol'                 : 'error', // Disallow Symbol Constructor
     'no-restricted-imports'         : 'off', // Disallow specific imports
     'no-this-before-super'          : 'error', // Disallow use of this/super before calling super() in constructors
+    'no-useless-computed-key'       : 'off', // Disallow unnecessary computed property keys in object literals
     'no-useless-constructor'        : 'error', // Disallow unnecessary constructor
+    'no-useless-rename'             : 'off', // Disallow renaming import, export, and destructured assignments to the same name
     'no-var'                        : 'off', // require let or const instead of var
     'object-shorthand'              : 'off', // Require Object Literal Shorthand Syntax
     'prefer-arrow-callback'         : 'off', // Suggest using arrow functions as callbacks
@@ -239,10 +246,9 @@ module.exports = {
     'prefer-spread'                 : 'error', // Suggest using the spread operator instead of .apply()
     'prefer-template'               : 'error', // Suggest using template literals instead of string concatenation
     'require-yield'                 : 'error', // Disallow generator functions that do not have yield
+    'rest-spread-spacing'           : ['error', 'never'], // Enforce spacing between rest and spread operators and their expressions
+    'sort-imports'                  : 'off', // Enforce sorting import declarations within module
     'template-curly-spacing'        : 'error', // Enforce Usage of Spacing in Template Strings
     'yield-star-spacing'            : ['error', { before : false, after : true }] // Enforce spacing around the * in yield* expressions
-    // ++++++++++++++++++++
-    // Removed
-    // ++++++++++++++++++++
   }
 };
