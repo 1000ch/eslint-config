@@ -1,6 +1,6 @@
 # eslint-config
 
-My ESLint config.
+[![Build Status](https://travis-ci.org/1000ch/eslint-config.svg?branch=master)](https://travis-ci.org/1000ch/eslint-config)
 
 ## Install
 
@@ -15,8 +15,7 @@ In `.eslintrc`:
 ```json
 {
   "extends": [
-    "@1000ch/eslint-config",
-    "@1000ch/eslint-config/react"
+    "@1000ch/eslint-config"
   ]
 }
 ```
@@ -27,8 +26,7 @@ In `package.json`:
 {
   "eslintConfig": {
     "extends": [
-      "@1000ch/eslint-config",
-      "@1000ch/eslint-config/react"
+      "@1000ch/eslint-config"
     ]
   }
 }
@@ -36,4 +34,4 @@ In `package.json`:
 
 ## License
 
-MIT: http://1000ch.mit-license.org/
+MIT: http://1000ch.mit-license.org

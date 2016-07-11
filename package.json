@@ -5,7 +5,6 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "react.js",
     "readme.md"
   ],
   "scripts": {
@@ -23,11 +22,9 @@
   },
   "homepage": "https://github.com/1000ch/eslint-config#readme",
   "devDependencies": {
-    "eslint": "^3.0.0"
+    "eslint": "^3.0.1"
   },
   "peerDependencies": {
-    "babel-eslint": "6.1.0",
-    "eslint": "^3.0.0",
-    "eslint-plugin-react": "^5.2.2"
+    "eslint": "^3.0.1"
   }
 }
