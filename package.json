@@ -22,9 +22,9 @@
   },
   "homepage": "https://github.com/1000ch/eslint-config#readme",
   "devDependencies": {
-    "eslint": "^3.0.1"
+    "eslint": "^3.5.0"
   },
   "peerDependencies": {
-    "eslint": "^3.0.1"
+    "eslint": "^3.5.0"
   }
 }

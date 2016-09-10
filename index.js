@@ -22,8 +22,8 @@ module.exports = {
     'no-dupe-args'                  : 'error', // No duplicate arguments
     'no-dupe-keys'                  : 'error', // Disallow Duplicate Keys
     'no-duplicate-case'             : 'error', // Rule to disallow a duplicate case label
-    'no-empty'                      : 'error', // Disallow Empty Block Statements
     'no-empty-character-class'      : 'error', // Disallow Empty Character Classes
+    'no-empty'                      : 'error', // Disallow Empty Block Statements
     'no-ex-assign'                  : 'error', // Disallow Assignment of the Exception Parameter
     'no-extra-boolean-cast'         : 'error', // Disallow Extra Boolean Casts
     'no-extra-parens'               : 'error', // Disallow Extra Parens
@@ -34,11 +34,13 @@ module.exports = {
     'no-irregular-whitespace'       : 'error', // No irregular whitespace
     'no-negated-in-lhs'             : 'error', // Disallow negated left operand of in operator
     'no-obj-calls'                  : 'error', // Disallow Global Object Function Calls
+    'no-prototype-builtins'         : 'error', // Disallow calling some Object.prototype methods directly on objects
     'no-regex-spaces'               : 'error', // Disallow Spaces in Regular Expressions
     'no-sparse-arrays'              : 'error', // Disallow Sparse Arrays
     'no-unexpected-multiline'       : 'error', // Avoid unexpected multiline expressions
     'no-unreachable'                : 'error', // Disallow Unreachable Code
     'no-unsafe-finally'             : 'error', // Disallow control flow statements in finally blocks
+    'no-unsafe-negation'            : 'error', // Disallow negating the left operand of relational operators
     'use-isnan'                     : 'error', // Require isNaN()
     'valid-jsdoc'                   : 'error', // Validates JSDoc comments are syntactically correct
     'valid-typeof'                  : 'error', // Ensures that the results of typeof are compared against a valid string
@@ -48,6 +50,7 @@ module.exports = {
     'accessor-pairs'                : 'off', // Enforces getter/setter pairs in objects
     'array-callback-return'         : 'error', // Enforces return statements in callbacks of array’s methods
     'block-scoped-var'              : 'error', // Treat var as Block Scoped
+    'class-methods-use-this'        : 'off', // Enforce that class methods utilize this
     complexity                      : 'off', // Limit Cyclomatic Complexity
     'consistent-return'             : 'error', // Require Consistent Returns
     curly                           : 'error', // Require Following Curly Brace Conventions
@@ -70,6 +73,7 @@ module.exports = {
     'no-extra-label'                : 'error', // Disallow Unnecessary Labels
     'no-fallthrough'                : 'error', // Disallow Case Statement Fallthrough
     'no-floating-decimal'           : 'error', // Disallow Floating Decimals
+    'no-global-assign'              : 'error', // Disallow assignments to native objects or read-only global variables
     'no-implicit-coercion'          : 'error', // Disallow the type conversion with shorter notations
     'no-implicit-globals'           : 'off', // Disallow var and Named Functions in Global Scope
     'no-implied-eval'               : 'error', // Disallow Implied eval()
@@ -85,8 +89,8 @@ module.exports = {
     'no-new'                        : 'off', // Disallow new For Side Effects
     'no-new-func'                   : 'error', // Disallow Function Constructor
     'no-new-wrappers'               : 'error', // Disallow Primitive Wrapper Instances
-    'no-octal'                      : 'error', // Disallow Octal Literals
     'no-octal-escape'               : 'error', // Disallow Octal Escapes
+    'no-octal'                      : 'error', // Disallow Octal Literals
     'no-param-reassign'             : 'off', // Disallow Reassignment of Function Parameters
     'no-proto'                      : 'error', // Disallow Use of __proto__
     'no-redeclare'                  : 'error', // Disallow Redeclaring Variables
@@ -121,10 +125,10 @@ module.exports = {
     'no-delete-var'                 : 'error', // Disallow Variables Deletion
     'no-label-var'                  : 'error', // Disallow Labels That Are Variables Names
     'no-restricted-globals'         : 'off', // Disallow specific global variables
-    'no-shadow'                     : 'error', // Disallow Shadowing
     'no-shadow-restricted-names'    : 'error', // Disallow Shadowing of Restricted Names
-    'no-undef'                      : 'error', // Disallow Undeclared Variables
+    'no-shadow'                     : 'error', // Disallow Shadowing
     'no-undef-init'                 : 'off', // Disallow Initializing to undefined
+    'no-undef'                      : 'error', // Disallow Undeclared Variables
     'no-undefined'                  : 'off', // Disallow Use of undefined Variable
     'no-unused-vars'                : 'error', // Disallow Unused Variables
     'no-use-before-define'          : 'error', // Disallow Early Use
@@ -140,6 +144,7 @@ module.exports = {
     'no-process-env'                : 'off', // Disallow process.env
     'no-process-exit'               : 'off', // Disallow process.exit()
     'no-restricted-modules'         : 'off', // Disallow Node.js modules
+    'no-restricted-properties'      : 'off', // Disallow certain properties on certain objects
     'no-sync'                       : 'off', // Disallow Synchronous Methods
     // ++++++++++++++++++++
     // Stylistic Issues
@@ -154,6 +159,7 @@ module.exports = {
     'computed-property-spacing'     : ['error', 'never'], // Require or disallow padding inside computed properties
     'consistent-this'               : 'off', // Enforce consistent naming when capturing the current execution context
     'eol-last'                      : 'off', // Enforce newline at the end of file, with no multiple empty lines
+    'func-call-spacing'             : ['error', 'never'], // require or disallow spacing between function identifiers and their invocations
     'func-names'                    : 'off', // Require function expressions to have a name
     'func-style'                    : 'off', // Enforce use of function declarations or expressions
     'id-blacklist'                  : 'off', // Disallow certain identifiers to prevent them being used
@@ -163,15 +169,18 @@ module.exports = {
     'jsx-quotes'                    : ['error', 'prefer-double'], // Specify whether double or single quotes should be used in JSX attributes
     'key-spacing'                   : ['error', { beforeColon : true, afterColon : true, align : 'colon' }], // Enforce spacing between keys and values in object literal properties
     'keyword-spacing'               : 'error', // Enforce spacing before and after keywords
+    'line-comment-position'         : 'error', // Enforce position of line comments
     'linebreak-style'               : ['error', 'unix'], // Enforce linebreak style
     'lines-around-comment'          : 'off', // Enforce empty lines around comments
+    'lines-around-directive'        : 'error', // Require or disallow newlines around directives
     'max-depth'                     : 'off', // Specify the maximum depth that blocks can be nested
     'max-len'                       : ['error', 200, 4], // Specify the maximum length of a line in your program
     'max-lines'                     : 'off', // Enforce a maximum file length
     'max-nested-callbacks'          : 'off', // Specify the maximum depth callbacks can be nested
     'max-params'                    : 'off', // Specify the number of parameters that can be used in the function declaration
-    'max-statements'                : 'off', // Specify the maximum number of statement allowed in a function
     'max-statements-per-line'       : 'off', // Specify the maximum number of statements allowed per line
+    'max-statements'                : 'off', // Specify the maximum number of statement allowed in a function
+    'multiline-ternary'             : 'error', // Enforce newlines between operands of ternary expressions
     'new-cap'                       : 'error', // Require a capital letter for constructors
     'new-parens'                    : 'error', // Disallow the omission of parentheses when invoking a constructor with no arguments
     'newline-after-var'             : 'off', // Require or disallow an empty newline after variable declarations
@@ -190,7 +199,7 @@ module.exports = {
     'no-new-object'                 : 'error', // Disallow the use of the Object constructor
     'no-plusplus'                   : 'off', // Disallow use of unary operators, ++ and --
     'no-restricted-syntax'          : 'off', // Disallow use of certain syntax in code
-    'no-spaced-func'                : 'error', // Disallow space between function identifier and application
+    'no-tabs'                       : 'error', // Disallow tabs in file
     'no-ternary'                    : 'off', // Disallow the use of ternary operators
     'no-trailing-spaces'            : 'error', // Disallow trailing whitespace at the end of lines
     'no-underscore-dangle'          : 'off', // Disallow dangling underscores in identifiers
@@ -199,16 +208,17 @@ module.exports = {
     'object-curly-newline'          : 'off', // Enforce consistent line breaks inside braces
     'object-curly-spacing'          : ['error', 'always'], // Enforce consistent spacing inside braces
     'object-property-newline'       : 'off', // Enforce placing object properties on separate lines
-    'one-var'                       : ['error', { var : 'never', let : 'never', const : 'never' }], // Require or disallow one variable declaration per function
     'one-var-declaration-per-line'  : 'off', // Require or disallow an newline around variable declarations
+    'one-var'                       : ['error', { var : 'never', let : 'never', const : 'never' }], // Require or disallow one variable declaration per function
     'operator-assignment'           : 'off', // Require assignment operator shorthand where possible or prohibit it entirely
     'operator-linebreak'            : ['error', 'after'], // Enforce operators to be placed before or after line breaks
     'padded-blocks'                 : ['error', 'never'], // Enforce padding within blocks
     'quote-props'                   : ['error', 'as-needed'], // Require quotes around object literal property names
     quotes                          : ['error', 'single', 'avoid-escape'], // Specify whether backticks, double or single quotes should be used
     'require-jsdoc'                 : 'off', // Require JSDoc comment
-    semi                            : ['error', 'always'], // Require or disallow use of semicolons instead of ASI
     'semi-spacing'                  : ['error', { before : false, after : true }], // Enforce spacing before and after semicolons
+    semi                            : ['error', 'always'], // Require or disallow use of semicolons instead of ASI
+    'sort-keys'                     : 'off', // Requires object keys to be sorted
     'sort-vars'                     : 'off', // Enforce sorting variables within the same declaration block
     'space-before-blocks'           : ['error', 'always'], // Require or disallow a space before blocks
     'space-before-function-paren'   : ['error', 'never'], // Require or disallow a space before function opening parenthesis
@@ -241,6 +251,7 @@ module.exports = {
     'object-shorthand'              : 'off', // Require Object Literal Shorthand Syntax
     'prefer-arrow-callback'         : 'off', // Suggest using arrow functions as callbacks
     'prefer-const'                  : 'off', // Suggest using const
+    'prefer-numeric-literals'       : 'off', // Disallow parseInt() in favor of binary, octal, and hexadecimal literals
     'prefer-reflect'                : 'error', // Suggest using Reflect methods where applicable
     'prefer-rest-params'            : 'error', // Suggest using the rest parameters instead of arguments
     'prefer-spread'                 : 'error', // Suggest using the spread operator instead of .apply()
@@ -248,6 +259,7 @@ module.exports = {
     'require-yield'                 : 'error', // Disallow generator functions that do not have yield
     'rest-spread-spacing'           : ['error', 'never'], // Enforce spacing between rest and spread operators and their expressions
     'sort-imports'                  : 'off', // Enforce sorting import declarations within module
+    'symbol-description'            : 'error', // Require symbol descriptions
     'template-curly-spacing'        : 'error', // Enforce Usage of Spacing in Template Strings
     'yield-star-spacing'            : ['error', { before : false, after : true }] // Enforce spacing around the * in yield* expressions
   }
