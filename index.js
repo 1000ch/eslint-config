@@ -221,7 +221,7 @@ module.exports = {
     'sort-keys'                     : 'off', // Requires object keys to be sorted
     'sort-vars'                     : 'off', // Enforce sorting variables within the same declaration block
     'space-before-blocks'           : ['error', 'always'], // Require or disallow a space before blocks
-    'space-before-function-paren'   : ['error', { anonymous : 'never', named : 'always' }], // Require or disallow a space before function opening parenthesis
+    'space-before-function-paren'   : ['error', { anonymous : 'always', named : 'never' }], // Require or disallow a space before function opening parenthesis
     'space-in-parens'               : ['error', 'never'], // Require or disallow spaces inside parentheses
     'space-infix-ops'               : 'error', // Require spaces around operators
     'space-unary-ops'               : 'error', // Require or disallow spaces before/after unary operators
