@@ -1,6 +1,6 @@
 {
   "name": "@1000ch/eslint-config",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "description": "ESLint config",
   "main": "index.js",
   "files": [
