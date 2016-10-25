@@ -32,7 +32,6 @@ module.exports = {
     'no-inner-declarations'         : 'error', // Declarations in Program or Function Body
     'no-invalid-regexp'             : 'error', // Disallow Invalid Regular Expressions
     'no-irregular-whitespace'       : 'error', // No irregular whitespace
-    'no-negated-in-lhs'             : 'error', // Disallow negated left operand of in operator
     'no-obj-calls'                  : 'error', // Disallow Global Object Function Calls
     'no-prototype-builtins'         : 'error', // Disallow calling some Object.prototype methods directly on objects
     'no-regex-spaces'               : 'error', // Disallow Spaces in Regular Expressions
@@ -85,15 +84,15 @@ module.exports = {
     'no-magic-numbers'              : 'off', // Disallow Magic Numbers
     'no-multi-spaces'               : 'error', // Disallow multiple spaces
     'no-multi-str'                  : 'error', // Disallow Multiline Strings
-    'no-native-reassign'            : 'error', // Disallow Reassignment of Native Objects
-    'no-new'                        : 'off', // Disallow new For Side Effects
     'no-new-func'                   : 'error', // Disallow Function Constructor
     'no-new-wrappers'               : 'error', // Disallow Primitive Wrapper Instances
+    'no-new'                        : 'off', // Disallow new For Side Effects
     'no-octal-escape'               : 'error', // Disallow Octal Escapes
     'no-octal'                      : 'error', // Disallow Octal Literals
     'no-param-reassign'             : 'off', // Disallow Reassignment of Function Parameters
     'no-proto'                      : 'error', // Disallow Use of __proto__
     'no-redeclare'                  : 'error', // Disallow Redeclaring Variables
+    'no-restricted-properties'      : 'off', // Disallow certain properties on certain objects
     'no-return-assign'              : 'error', // Disallow Assignment in return Statement
     'no-script-url'                 : 'error', // Disallow Script URLs
     'no-self-assign'                : 'error', // Disallow Self Assignment
@@ -144,7 +143,6 @@ module.exports = {
     'no-process-env'                : 'off', // Disallow process.env
     'no-process-exit'               : 'off', // Disallow process.exit()
     'no-restricted-modules'         : 'off', // Disallow Node.js modules
-    'no-restricted-properties'      : 'off', // Disallow certain properties on certain objects
     'no-sync'                       : 'off', // Disallow Synchronous Methods
     // ++++++++++++++++++++
     // Stylistic Issues
@@ -160,6 +158,7 @@ module.exports = {
     'consistent-this'               : 'off', // Enforce consistent naming when capturing the current execution context
     'eol-last'                      : 'off', // Enforce newline at the end of file, with no multiple empty lines
     'func-call-spacing'             : ['error', 'never'], // require or disallow spacing between function identifiers and their invocations
+    'func-name-matching'            : 'off', // Require function names to match the name of the variable or property to which they are assigned
     'func-names'                    : 'off', // Require function expressions to have a name
     'func-style'                    : 'off', // Enforce use of function declarations or expressions
     'id-blacklist'                  : 'off', // Disallow certain identifiers to prevent them being used
@@ -234,7 +233,7 @@ module.exports = {
     'arrow-body-style'              : 'off', // Require braces in arrow function body
     'arrow-parens'                  : 'off', // Require parens in arrow function arguments
     'arrow-spacing'                 : ['error', { before : true, after : true }], // Require space before/after arrow function’s arrow
-    'constructor-super'             : 'off', // Verify calls of super() in constructors
+    'constructor-super'             : 'error', // Verify calls of super() in constructors
     'generator-star-spacing'        : ['error', { before : false, after : true }], // Enforce spacing around the * in generator functions
     'no-class-assign'               : 'error', // Disallow modifying variables of class declarations
     'no-confusing-arrow'            : 'off', // Disallow arrow functions where they could be confused with comparisons
