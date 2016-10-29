@@ -105,6 +105,7 @@ module.exports = {
     'no-useless-call'               : 'error', // Disallow unnecessary .call() and .apply()
     'no-useless-concat'             : 'error', // Disallow unnecessary concatenation of strings
     'no-useless-escape'             : 'error', // Disallow unnecessary escape usage
+    'no-useless-return'             : 'error', // Disallow redundant return statements
     'no-void'                       : 'off', // Disallow use of the void operator
     'no-warning-comments'           : 'off', // Disallow Warning Comments
     'no-with'                       : 'error', // No with Statements
