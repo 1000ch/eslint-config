@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/1000ch/eslint-config.svg?branch=master)](https://travis-ci.org/1000ch/eslint-config)
 [![devDependency Status](https://david-dm.org/1000ch/eslint-config/dev-status.svg)](https://david-dm.org/1000ch/eslint-config#info=dev)
+[![peerDependency Status](https://david-dm.org/1000ch/eslint-config/peer-status.svg)](https://david-dm.org/1000ch/eslint-config#info=peer)
 
 ## Install
 
