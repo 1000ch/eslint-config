@@ -94,6 +94,7 @@ module.exports = {
     'no-redeclare'                  : 'error', // Disallow Redeclaring Variables
     'no-restricted-properties'      : 'off', // Disallow certain properties on certain objects
     'no-return-assign'              : 'error', // Disallow Assignment in return Statement
+    'no-return-await'               : 'error', // Disallow unnecessary return await
     'no-script-url'                 : 'error', // Disallow Script URLs
     'no-self-assign'                : 'error', // Disallow Self Assignment
     'no-self-compare'               : 'error', // Disallow Self Compare
@@ -252,7 +253,6 @@ module.exports = {
     'prefer-arrow-callback'         : 'off', // Suggest using arrow functions as callbacks
     'prefer-const'                  : 'off', // Suggest using const
     'prefer-numeric-literals'       : 'off', // Disallow parseInt() in favor of binary, octal, and hexadecimal literals
-    'prefer-reflect'                : 'error', // Suggest using Reflect methods where applicable
     'prefer-rest-params'            : 'error', // Suggest using the rest parameters instead of arguments
     'prefer-spread'                 : 'error', // Suggest using the spread operator instead of .apply()
     'prefer-template'               : 'error', // Suggest using template literals instead of string concatenation
