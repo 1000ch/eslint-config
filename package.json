@@ -8,7 +8,8 @@
     "readme.md"
   ],
   "scripts": {
-    "test": "node test/index.js && eslint --max-warnings 0 -c index.js ."
+    "test": "node test/index.js && eslint --max-warnings 0 -c index.js .",
+    "postversion": "git push && git push --tags"
   },
   "repository": "1000ch/eslint-config",
   "keywords": [
