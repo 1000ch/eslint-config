@@ -14,6 +14,7 @@ module.exports = {
     // ++++++++++++++++++++
     // Possible Errors
     // ++++++++++++++++++++
+    'no-await-in-loop'              : 'error', // Disallow await inside of loops
     'no-cond-assign'                : 'error', // Disallow Assignment in Conditional Statements
     'no-console'                    : 'off', // Disallow Use of console
     'no-constant-condition'         : 'error', // Disallow use of constant expressions in conditions
