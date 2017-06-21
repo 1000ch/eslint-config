@@ -7,13 +7,14 @@ module.exports = {
     es6     : true
   },
   parserOptions : {
-    ecmaVersion : 6,
+    ecmaVersion : 8,
     sourceType  : 'module'
   },
   rules : {
     // ++++++++++++++++++++
     // Possible Errors
     // ++++++++++++++++++++
+    'for-direction'                    : 'error', // Enforce “for” loop update clause moving the counter in the right direction
     'no-await-in-loop'                 : 'error', // Disallow await inside of loops
     'no-compare-neg-zero'              : 'error', // Disallow comparing against -0
     'no-cond-assign'                   : 'error', // Disallow Assignment in Conditional Statements
@@ -24,8 +25,8 @@ module.exports = {
     'no-dupe-args'                     : 'error', // No duplicate arguments
     'no-dupe-keys'                     : 'error', // Disallow Duplicate Keys
     'no-duplicate-case'                : 'error', // Rule to disallow a duplicate case label
-    'no-empty-character-class'         : 'error', // Disallow Empty Character Classes
     'no-empty'                         : 'error', // Disallow Empty Block Statements
+    'no-empty-character-class'         : 'error', // Disallow Empty Character Classes
     'no-ex-assign'                     : 'error', // Disallow Assignment of the Exception Parameter
     'no-extra-boolean-cast'            : 'error', // Disallow Extra Boolean Casts
     'no-extra-parens'                  : 'error', // Disallow Extra Parens
@@ -38,6 +39,7 @@ module.exports = {
     'no-prototype-builtins'            : 'error', // Disallow calling some Object.prototype methods directly on objects
     'no-regex-spaces'                  : 'error', // Disallow Spaces in Regular Expressions
     'no-sparse-arrays'                 : 'error', // Disallow Sparse Arrays
+    'no-template-curly-in-string'      : 'error',  // Disallow template literal placeholder syntax in regular strings
     'no-unexpected-multiline'          : 'error', // Avoid unexpected multiline expressions
     'no-unreachable'                   : 'error', // Disallow Unreachable Code
     'no-unsafe-finally'                : 'error', // Disallow control flow statements in finally blocks
@@ -86,9 +88,9 @@ module.exports = {
     'no-magic-numbers'                 : 'off', // Disallow Magic Numbers
     'no-multi-spaces'                  : 'error', // Disallow multiple spaces
     'no-multi-str'                     : 'error', // Disallow Multiline Strings
+    'no-new'                           : 'off', // Disallow new For Side Effects
     'no-new-func'                      : 'error', // Disallow Function Constructor
     'no-new-wrappers'                  : 'error', // Disallow Primitive Wrapper Instances
-    'no-new'                           : 'off', // Disallow new For Side Effects
     'no-octal-escape'                  : 'error', // Disallow Octal Escapes
     'no-octal'                         : 'error', // Disallow Octal Literals
     'no-param-reassign'                : 'off', // Disallow Reassignment of Function Parameters
@@ -114,6 +116,7 @@ module.exports = {
     'no-with'                          : 'error', // No with Statements
     'prefer-promise-reject-errors'     : 'off', // Require using Error objects as Promise rejection reasons
     radix                              : 'error', // Require Radix Parameter
+    'require-await'                    : 'error', // Disallow async functions which have no await expression
     'vars-on-top'                      : 'off', // Require Variable Declarations to be at the top of their scope
     'wrap-iife'                        : ['error', 'any'], // Require IIFEs to be Wrapped
     yoda                               : 'off', // Require or disallow Yoda Conditions
@@ -129,10 +132,10 @@ module.exports = {
     'no-delete-var'                    : 'error', // Disallow Variables Deletion
     'no-label-var'                     : 'error', // Disallow Labels That Are Variables Names
     'no-restricted-globals'            : 'off', // Disallow specific global variables
-    'no-shadow-restricted-names'       : 'error', // Disallow Shadowing of Restricted Names
     'no-shadow'                        : 'error', // Disallow Shadowing
-    'no-undef-init'                    : 'off', // Disallow Initializing to undefined
+    'no-shadow-restricted-names'       : 'error', // Disallow Shadowing of Restricted Names
     'no-undef'                         : 'error', // Disallow Undeclared Variables
+    'no-undef-init'                    : 'off', // Disallow Initializing to undefined
     'no-undefined'                     : 'off', // Disallow Use of undefined Variable
     'no-unused-vars'                   : 'error', // Disallow Unused Variables
     'no-use-before-define'             : 'error', // Disallow Early Use
@@ -142,6 +145,7 @@ module.exports = {
     'callback-return'                  : 'error', // Enforce Return After Callback
     'global-require'                   : 'off', // Enforce require() on the top-level module scope
     'handle-callback-err'              : 'off', // Enforce Callback Error Handling
+    'no-buffer-constructor'            : 'error', // Disallow use of the Buffer() constructor
     'no-mixed-requires'                : 'error', // Disallow Mixed Requires
     'no-new-require'                   : 'error', // Disallow new require
     'no-path-concat'                   : 'off', // Disallow string concatenation when using
@@ -152,10 +156,13 @@ module.exports = {
     // ++++++++++++++++++++
     // Stylistic Issues
     // ++++++++++++++++++++
+    'array-bracket-newline'            : ['error', { multiline : true }], // Enforce linebreaks after opening and before closing array brackets
     'array-bracket-spacing'            : ['error', 'never'], // Enforce spacing inside array brackets
+    'array-element-newline'            : ['error', { multiline : true }], // Enforce line breaks after each array element
     'block-spacing'                    : ['error', 'always'], // Disallow or enforce spaces inside of single line blocks
     'brace-style'                      : ['error', '1tbs', { allowSingleLine : true }], // Enforce one true brace style
     camelcase                          : ['error', { properties : 'always' }], // Require camel case names
+    'capitalized-comments'             : 'off', // Enforce or disallow capitalization of the first letter of a comment
     'comma-dangle'                     : 'error', // Disallow or Enforce Dangling Commas
     'comma-spacing'                    : ['error', { before : false, after : true }], // Enforce spacing before and after comma
     'comma-style'                      : ['error', 'last'], // Enforce one true comma style
@@ -182,13 +189,11 @@ module.exports = {
     'max-lines'                        : 'off', // Enforce a maximum file length
     'max-nested-callbacks'             : 'off', // Specify the maximum depth callbacks can be nested
     'max-params'                       : 'off', // Specify the number of parameters that can be used in the function declaration
-    'max-statements-per-line'          : 'off', // Specify the maximum number of statements allowed per line
     'max-statements'                   : 'off', // Specify the maximum number of statement allowed in a function
+    'max-statements-per-line'          : 'off', // Specify the maximum number of statements allowed per line
     'multiline-ternary'                : 'error', // Enforce newlines between operands of ternary expressions
     'new-cap'                          : 'error', // Require a capital letter for constructors
     'new-parens'                       : 'error', // Disallow the omission of parentheses when invoking a constructor with no arguments
-    'newline-after-var'                : 'off', // Require or disallow an empty newline after variable declarations
-    'newline-before-return'            : 'off', // Require newline before return statement
     'newline-per-chained-call'         : 'off', // Enforce newline after each call when chaining the calls
     'no-array-constructor'             : 'error', // Disallow use of the Array constructor
     'no-bitwise'                       : 'off', // Disallow use of bitwise operators
@@ -197,6 +202,7 @@ module.exports = {
     'no-lonely-if'                     : 'off', // Disallow if as the only statement in an else block
     'no-mixed-operators'               : 'error', // Disallow mixes of different operators
     'no-mixed-spaces-and-tabs'         : 'error', // Disallow mixed spaces and tabs for indentation
+    'no-multi-assign'                  : 'error', // Disallow use of chained assignment expressions
     'no-multiple-empty-lines'          : 'error', // Disallow multiple empty lines
     'no-negated-condition'             : 'off', // Disallow negated conditions
     'no-nested-ternary'                : 'error', // Disallow nested ternary expressions
@@ -218,11 +224,13 @@ module.exports = {
     'operator-assignment'              : 'off', // Require assignment operator shorthand where possible or prohibit it entirely
     'operator-linebreak'               : ['error', 'after'], // Enforce operators to be placed before or after line breaks
     'padded-blocks'                    : ['error', 'never'], // Enforce padding within blocks
+    'padding-line-between-statements'  : ['error', { blankLine: 'always', prev: '*', next: 'return' }], // Require or disallow padding lines between statements
     'quote-props'                      : ['error', 'as-needed'], // Require quotes around object literal property names
     quotes                             : ['error', 'single', 'avoid-escape'], // Specify whether backticks, double or single quotes should be used
     'require-jsdoc'                    : 'off', // Require JSDoc comment
-    'semi-spacing'                     : ['error', { before : false, after : true }], // Enforce spacing before and after semicolons
     semi                               : ['error', 'always'], // Require or disallow use of semicolons instead of ASI
+    'semi-spacing'                     : ['error', { before : false, after : true }], // Enforce spacing before and after semicolons
+    'semi-style'                       : ['error', 'last'], // Enforce location of semicolons
     'sort-keys'                        : 'off', // Requires object keys to be sorted
     'sort-vars'                        : 'off', // Enforce sorting variables within the same declaration block
     'space-before-blocks'              : ['error', 'always'], // Require or disallow a space before blocks
@@ -231,6 +239,7 @@ module.exports = {
     'space-infix-ops'                  : 'error', // Require spaces around operators
     'space-unary-ops'                  : 'error', // Require or disallow spaces before/after unary operators
     'spaced-comment'                   : ['error', 'always'], // Require or disallow a space immediately following the // or /* in a comment
+    'switch-colon-spacing'             : 'error', // Enforce spacing around colons of switch statements
     'template-tag-spacing'             : ['error', 'never'], // Require or disallow spacing between template tags and their literals
     'unicode-bom'                      : 'off', // Require or disallow the Unicode BOM
     'wrap-regex'                       : 'off', // Require regex literals to be wrapped in parentheses
